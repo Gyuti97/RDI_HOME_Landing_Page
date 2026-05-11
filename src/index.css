@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Michroma&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #c8102e;
+  --color-brand-black: #131313;
+  --color-brand-charcoal: #1c1c1c;
+  --color-brand-grey: #2a2a2a;
+  
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-michroma: "Michroma", sans-serif;
+  --font-space: "Space Grotesk", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-black text-white font-space antialiased selection:bg-brand-red selection:text-white;
+  }
+}
+
+.industrial-grid {
+  background-image: radial-gradient(circle, #2a2a2a 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.red-offset-shadow {
+  box-shadow: 4px 4px 0px 0px #c8102e;
+}
+
