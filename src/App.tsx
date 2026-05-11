@@ -254,7 +254,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
           <a href="#" className="inline-block transition-transform hover:scale-105 active:scale-95">
             <div className="bg-brand-red px-4 py-2 flex items-center justify-center shadow-[0_0_20px_rgba(200,16,46,0.3)]">
-              <img src="/logo2.svg" alt="RDI HOME Logo" className="h-8 md:h-10 w-auto" />
+              <img src="logo2.svg" alt="RDI HOME Logo" className="h-8 md:h-10 w-auto" />
             </div>
           </a>
           
@@ -620,7 +620,7 @@ export default function App() {
                    <div className="aspect-[4/3] bg-brand-charcoal border border-brand-grey overflow-hidden relative group/map flex items-center justify-center bg-[radial-gradient(circle_at_center,rgba(200,16,46,0.1)_0%,transparent_70%)]">
                     <div className="relative w-full h-full p-2 md:p-4 transition-transform duration-700 group-hover/map:scale-[1.02]">
                       <img 
-                        src="/hu.svg" 
+                        src="hu.svg" 
                         alt="Magyarország Térkép" 
                         className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(200,16,46,0.3)] group-hover/map:drop-shadow-[0_0_25px_rgba(200,16,46,0.5)] transition-all duration-700" 
                       />
@@ -676,7 +676,7 @@ export default function App() {
           <div className="md:col-span-5">
             <div className="mb-10 inline-block">
               <div className="bg-brand-red p-6 shadow-[0_0_40px_rgba(200,16,46,0.2)] border-b-4 border-brand-black/20">
-                <img src="/logo2.svg" alt="RDI HOME Logo" className="h-16 md:h-20 w-auto" />
+                <img src="logo2.svg" alt="RDI HOME Logo" className="h-16 md:h-20 w-auto" />
               </div>
             </div>
             <p className="text-gray-400 font-light leading-relaxed max-w-sm mb-12">
