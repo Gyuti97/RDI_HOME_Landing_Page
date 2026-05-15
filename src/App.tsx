@@ -22,7 +22,16 @@ import {
   SquareArrowOutUpRight,
   Share2,
   Table,
-  MapPin
+  MapPin,
+  FileText,
+  Lightbulb,
+  Radio,
+  Settings,
+  Power,
+  Activity,
+  ShieldCheck,
+  Building2,
+  Home
 } from 'lucide-react';
 
 
@@ -95,20 +104,16 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
   </a>
 );
 
-const ServiceCard = ({ icon: Icon, title, description }: { icon: any; title: string; description: string }) => (
-  <motion.div 
-    whileHover={{ backgroundColor: BRAND_RED, borderColor: BRAND_RED }}
-    transition={{ duration: 0 }}
-    className="p-8 border border-brand-grey bg-brand-black group cursor-pointer"
-  >
-    <div className="mb-6">
-      <Icon className="w-8 h-8 text-brand-red group-hover:text-white overflow-visible" strokeWidth={1.5} />
+const SubServiceItem = ({ title, description }: { title: string; description: string }) => (
+  <div className="flex flex-col gap-2 py-6 border-b border-brand-grey/30 group/sub last:border-0 hover:bg-white/5 transition-colors px-4 -mx-4">
+    <div className="flex items-center gap-4">
+      <div className="w-2 h-2 bg-brand-red group-hover/sub:scale-150 transition-transform"></div>
+      <h4 className="font-orbitron text-sm uppercase tracking-wider text-white group-hover/sub:translate-x-2 transition-transform">{title}</h4>
     </div>
-    <h3 className="font-orbitron text-lg uppercase mb-4 tracking-wider group-hover:text-white">{title}</h3>
-    <p className="text-gray-400 text-sm leading-relaxed group-hover:text-white">
+    <p className="text-gray-500 text-xs font-light leading-relaxed pl-6 group-hover/sub:text-gray-300 transition-colors md:max-w-md">
       {description}
     </p>
-  </motion.div>
+  </div>
 );
 
 interface ProjectCardProps {
@@ -152,57 +157,57 @@ const ProjectCard = ({ title, status, year, image, index, heightClass = "aspect-
 
 const MASONRY_PROJECTS = [
   {
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop",
-    title: "Budapest Tech Center",
+    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2669&auto=format&fit=crop",
+    title: "Ipari Park Elosztórendszer",
     status: "Befejezett",
     year: "2025",
     heightClass: "aspect-[4/5]"
   },
   {
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2670&auto=format&fit=crop",
-    title: "Modern Villa",
+    image: "https://images.unsplash.com/photo-1558444479-2753d56666e3?q=80&w=2574&auto=format&fit=crop",
+    title: "Társasházi Alapszerelés",
     status: "Folyamatban",
     year: "2026",
     heightClass: "aspect-[1/1]"
   },
   {
-    image: "https://images.unsplash.com/photo-1503387762-592dee582a1b?q=80&w=2670&auto=format&fit=crop",
-    title: "Industrial Győr",
+    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2670&auto=format&fit=crop",
+    title: "Győri Ipari Csarnok",
     status: "Befejezett",
     year: "2024",
     heightClass: "aspect-[1/1]"
   },
   {
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2670&auto=format&fit=crop",
-    title: "Office Park",
+    image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2670&auto=format&fit=crop",
+    title: "Irodaház Világítástechnika",
     status: "Befejezett",
-    year: "2023",
+    year: "2024",
     heightClass: "aspect-[4/3]"
   },
   {
-    image: "https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?q=80&w=2670&auto=format&fit=crop",
-    title: "Luxury Apt",
+    image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=2670&auto=format&fit=crop",
+    title: "Okos Otthon Kivitelezés",
     status: "Folyamatban",
     year: "2026",
     heightClass: "aspect-[1/1]"
   },
   {
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2670&auto=format&fit=crop",
-    title: "Innovation Hub",
+    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2670&auto=format&fit=crop",
+    title: "Logisztikai Központ",
     status: "Átadva",
     year: "2026",
     heightClass: "aspect-[16/10]"
   },
   {
-    image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2670&auto=format&fit=crop",
-    title: "City Center Reno",
+    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2670&auto=format&fit=crop",
+    title: "Panellakás Felújítás",
     status: "Befejezett",
     year: "2024",
     heightClass: "aspect-[4/5]"
   },
   {
-    image: "https://images.unsplash.com/photo-1600585154340-be6199f7d009?q=80&w=2670&auto=format&fit=crop",
-    title: "Premium Estate",
+    image: "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=2670&auto=format&fit=crop",
+    title: "Audi Hungaria Alállomás",
     status: "Folyamatban",
     year: "2025",
     heightClass: "aspect-[1/1]"
@@ -329,7 +334,7 @@ export default function App() {
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-px bg-brand-red"></div>
                 <span className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.3em]">
-                  Alapítva 2026 | Ipari Evolúció
+                  Alapítva 2024
                 </span>
               </div>
               <h1 className="font-orbitron text-5xl sm:text-6xl md:text-8xl font-black mb-8 leading-none tracking-tight">
@@ -417,6 +422,8 @@ export default function App() {
                   </p>
                 </div>
               </div>
+
+
             </div>
 
             <div className="lg:col-span-5 flex flex-col gap-8">
@@ -433,13 +440,13 @@ export default function App() {
               <div className="bg-brand-red p-10 flex flex-col justify-center text-white relative overflow-hidden group shadow-2xl">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 -mr-16 -mt-16 rotate-45 transition-transform group-hover:rotate-90 duration-700"></div>
                 <div className="flex items-center gap-4 mb-6">
-                  <HardHat className="w-10 h-10 opacity-60" strokeWidth={1} />
+                  <Zap className="w-10 h-10 opacity-60" strokeWidth={1} />
                   <h3 className="font-orbitron text-xl font-black uppercase leading-tight">
-                    Minőségi Szemlélet
+                    Elektromos Biztonság
                   </h3>
                 </div>
                 <p className="text-sm font-light leading-relaxed opacity-90">
-                  Nem csupán építünk, hanem értéket teremtünk. A legkisebb villanyszerelési munkától a teljes szerkezetépítésig ugyanazt a fegyelmet alkalmazzuk.
+                  Nálunk az elektromos biztonság nem opció, hanem alapvető követelmény. Minden hálózatot a legszigorúbb szabványok szerint építünk ki, garantálva a hosszú távú üzembiztonságot és precizitást.
                 </p>
                 <div className="mt-8 h-1 w-12 bg-white group-hover:w-full transition-all duration-500"></div>
               </div>
@@ -462,55 +469,90 @@ export default function App() {
                 <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl uppercase tracking-tighter mb-4">Szolgáltatások</h2>
                 <div className="flex items-center gap-4">
                   <div className="w-4 h-4 border border-brand-red"></div>
-                  <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] md:tracking-[0.4em]">Teljes körű építőipari megoldások</p>
+                  <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] md:tracking-[0.4em]">Professzionális villamos hálózati megoldások</p>
                 </div>
               </div>
               <div className="text-right hidden md:block">
-                <span className="text-[10px] font-michroma text-gray-600 uppercase tracking-widest whitespace-nowrap">Est 2026 // RDI-04</span>
+                <span className="text-[10px] font-michroma text-gray-600 uppercase tracking-widest whitespace-nowrap">Est 2024 // RDI-04</span>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-brand-grey border border-brand-grey">
-              <ServiceCard 
-                icon={Construction}
-                title="Földmunka"
-                description="Precíz gépi földmunka, alapozás előkésztés és tereprendezés professzionális flottával."
-              />
-              <ServiceCard 
-                icon={Layers}
-                title="Szerkezetépítés"
-                description="Monolit beton és acélszerkezeti megoldások az alapoktól a tetőig."
-              />
-              <ServiceCard 
-                icon={Zap}
-                title="Villanyszerelés"
-                description="Ipari és lakossági elektromos hálózatok tervezése és kivitelezése."
-              />
-              <ServiceCard 
-                icon={Wind}
-                title="Épületgépészet"
-                description="Modern fűtés, hűtés és vízellátó rendszerek integrált automatizálással."
-              />
-              <ServiceCard 
-                icon={DoorOpen}
-                title="Nyílászáró csere"
-                description="Prémium minőségű ablakok és ajtók beépítése kiemelkedő hőszigeteléssel."
-              />
-              <ServiceCard 
-                icon={Hammer}
-                title="Ács munkák"
-                description="Tetőszerkezetek építése, felújítása és egyedi faipari szerkezetek kivitelezése."
-              />
-              <ServiceCard 
-                icon={Table}
-                title="Hőszigetelés"
-                description="Homlokzati és födém szigetelési rendszerek az energiahatékonyságért."
-              />
-              <ServiceCard 
-                icon={HardHat}
-                title="Kőműves munkák"
-                description="Hagyományos és modern falazási technikák, vakolás és burkolás."
-              />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mt-12">
+              {/* Residential Services */}
+              <div className="border border-brand-grey bg-brand-black p-8 md:p-12 relative overflow-hidden group hover:border-brand-red/50 transition-all duration-700">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 -mr-16 -mt-16 rotate-45 group-hover:rotate-90 transition-transform duration-1000"></div>
+                
+                <div className="flex items-center gap-6 mb-12 relative z-10">
+                  <div className="w-16 h-16 bg-brand-red flex items-center justify-center text-white ring-8 ring-brand-red/10 group-hover:scale-110 transition-transform duration-500">
+                    <Home className="w-8 h-8" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="font-orbitron text-2xl font-black uppercase tracking-widest text-white">Lakossági villanyszerelés</h3>
+                    <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] mt-2">Otthoni megoldások & Biztonság</p>
+                  </div>
+                </div>
+
+                <div className="space-y-0 relative z-10">
+                  <SubServiceItem 
+                    title="Elektromos alapszerelés" 
+                    description="Modern kábelezés, horonymarás és vezetékfűzés újépítésű ingatlanoknál és felújításoknál."
+                  />
+                  <SubServiceItem 
+                    title="Lakáselosztók szerelése" 
+                    description="Biztosítéktáblák szakszerű kialakítása, túlfeszültségvédelem és ÉV-relé beépítése."
+                  />
+                  <SubServiceItem 
+                    title="Szerelvényezés, Lámpázás" 
+                    description="Kapcsolók, konnektorok és világítástechnikai eszközök esztétikus felszerelése."
+                  />
+                  <SubServiceItem 
+                    title="Áramszolgáltatói ügyintézés" 
+                    description="Mérőhelyek szabványosítása és teljesítménybővítés teljes körű lebonyolítása."
+                  />
+                  <SubServiceItem 
+                    title="Dokumentált átadás" 
+                    description="Precíz műszaki dokumentáció és biztonságtechnikai felülvizsgálat minden projektnél."
+                  />
+                </div>
+              </div>
+
+              {/* Industrial Services */}
+              <div className="border border-brand-grey bg-brand-black p-8 md:p-12 relative overflow-hidden group hover:border-brand-red/50 transition-all duration-700">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-brand-red/5 -mr-16 -mt-16 rotate-45 group-hover:rotate-90 transition-transform duration-1000"></div>
+                
+                <div className="flex items-center gap-6 mb-12 relative z-10">
+                  <div className="w-16 h-16 bg-brand-red flex items-center justify-center text-white ring-8 ring-brand-red/10 group-hover:scale-110 transition-transform duration-500">
+                    <Building2 className="w-8 h-8" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="font-orbitron text-2xl font-black uppercase tracking-widest text-white">Ipari villanyszerelés</h3>
+                    <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] mt-2">Nagy teljesítményű rendszerek</p>
+                  </div>
+                </div>
+
+                <div className="space-y-0 relative z-10">
+                  <SubServiceItem 
+                    title="Erős/Gyengeáramú kivitelezés" 
+                    description="Ipari csarnokok és irodaházak komplex elektromos hálózatának mérnöki kiépítése."
+                  />
+                  <SubServiceItem 
+                    title="Tálca nyomvonal építés" 
+                    description="Professzionális fém kábelvezetési rendszerek tervezése és teherbíró telepítése."
+                  />
+                  <SubServiceItem 
+                    title="Nyomvonal építés" 
+                    description="Technológiai védőcsövezés és kábeltartó szerkezetek létesítése ipari környezetben."
+                  />
+                  <SubServiceItem 
+                    title="Főelosztók és mérőhelyek" 
+                    description="Nagy teljesítményű kapcsolóberendezések és ipari mérőszekrények kialakítása."
+                  />
+                  <SubServiceItem 
+                    title="Dokumentált átadás" 
+                    description="Szabványossági felülvizsgálat, jegyzőkönyvezés és üzemeltetési dokumentáció."
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </motion.section>
@@ -711,7 +753,7 @@ export default function App() {
 
           <div className="md:col-span-3 flex flex-col items-center md:items-end justify-between">
             <div className="text-right">
-              <span className="font-orbitron text-5xl md:text-7xl font-black text-brand-red opacity-10">2026</span>
+              <span className="font-orbitron text-5xl md:text-7xl font-black text-brand-red opacity-10">2024</span>
             </div>
           </div>
         </div>
@@ -719,14 +761,14 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 pt-12 border-t border-brand-grey flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col gap-2">
             <p className="text-[10px] font-michroma uppercase tracking-[0.2em] text-gray-600">
-              © 2026 RDI HOME KFT. IPARI PRECIZITÁS GARANTÁLVA.
+              © 2024 RDI HOME KFT. IPARI PRECIZITÁS GARANTÁLVA.
             </p>
             <p className="text-[9px] font-michroma uppercase tracking-[0.2em] text-gray-700">
               Designed by <a href="https://www.ycreative.art" target="_blank" rel="noopener noreferrer" className="text-brand-red hover:text-white transition-colors">Y CREATIVE</a>
             </p>
           </div>
           <div className="flex gap-8 text-[10px] font-michroma uppercase tracking-widest text-gray-600">
-            <span>Budapest, Magyarország</span>
+            <span>Győr, Magyarország</span>
             <span>Minden jog fenntartva</span>
           </div>
         </div>
