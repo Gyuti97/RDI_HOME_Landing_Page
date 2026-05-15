@@ -98,7 +98,7 @@ const BRAND_RED = "#c8102e";
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a 
     href={href} 
-    className="text-xs font-michroma uppercase tracking-[0.2em] text-gray-400 hover:text-brand-red transition-colors"
+    className="text-xs font-space font-bold uppercase tracking-[0.2em] text-gray-400 hover:text-brand-red transition-colors"
   >
     {children}
   </a>
@@ -108,7 +108,7 @@ const SubServiceItem = ({ title, description }: { title: string; description: st
   <div className="flex flex-col gap-2 py-6 border-b border-brand-grey/30 group/sub last:border-0 hover:bg-white/5 transition-colors px-4 -mx-4">
     <div className="flex items-center gap-4">
       <div className="w-2 h-2 bg-brand-red group-hover/sub:scale-150 transition-transform"></div>
-      <h4 className="font-orbitron text-sm uppercase tracking-wider text-white group-hover/sub:translate-x-2 transition-transform">{title}</h4>
+      <h4 className="font-space text-sm uppercase tracking-wider text-white group-hover/sub:translate-x-2 transition-transform">{title}</h4>
     </div>
     <p className="text-gray-500 text-xs font-light leading-relaxed pl-6 group-hover/sub:text-gray-300 transition-colors md:max-w-md">
       {description}
@@ -299,11 +299,11 @@ export default function App() {
             className="fixed inset-0 z-40 bg-brand-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 md:hidden"
           >
             <div className="flex flex-col items-center gap-10">
-              <a href="#home" onClick={() => setIsMenuOpen(false)} className="text-xl font-orbitron font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Kezdőlap</a>
-              <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-xl font-orbitron font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Rólunk</a>
-              <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-xl font-orbitron font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Szolgáltatások</a>
-              <a href="#projects" onClick={() => setIsMenuOpen(false)} className="text-xl font-orbitron font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Referenciák</a>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-xl font-orbitron font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Kapcsolat</a>
+              <a href="#home" onClick={() => setIsMenuOpen(false)} className="text-xl font-space font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Kezdőlap</a>
+              <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-xl font-space font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Rólunk</a>
+              <a href="#services" onClick={() => setIsMenuOpen(false)} className="text-xl font-space font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Szolgáltatások</a>
+              <a href="#projects" onClick={() => setIsMenuOpen(false)} className="text-xl font-space font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Referenciák</a>
+              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-xl font-space font-bold uppercase tracking-widest text-white hover:text-brand-red transition-colors">Kapcsolat</a>
             </div>
             
           </motion.div>
@@ -381,7 +381,7 @@ export default function App() {
             <div className="lg:col-span-7 flex flex-col pt-8">
               <div className="flex items-center gap-6 mb-12">
                 <div className="w-12 md:w-16 h-1 bg-brand-red"></div>
-                <h2 className="font-orbitron text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-widest">Rólunk</h2>
+                <h2 className="font-space text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-widest">Rólunk</h2>
               </div>
               
               <div className="space-y-8 text-gray-400 font-light leading-relaxed text-base italic border-l-2 border-brand-red pl-8">
@@ -466,7 +466,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-6 md:px-12">
             <div className="flex flex-col md:flex-row justify-between items-baseline mb-20 gap-4">
               <div>
-                <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl uppercase tracking-tighter mb-4">Szolgáltatások</h2>
+                <h2 className="font-space text-2xl sm:text-3xl md:text-4xl uppercase tracking-tighter mb-4">Szolgáltatások</h2>
                 <div className="flex items-center gap-4">
                   <div className="w-4 h-4 border border-brand-red"></div>
                   <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] md:tracking-[0.4em]">Professzionális villamos hálózati megoldások</p>
@@ -487,7 +487,7 @@ export default function App() {
                     <Home className="w-8 h-8" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-orbitron text-2xl font-black uppercase tracking-widest text-white">Lakossági villanyszerelés</h3>
+                    <h3 className="font-space text-2xl font-black uppercase tracking-widest text-white">Lakossági villanyszerelés</h3>
                     <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] mt-2">Otthoni megoldások & Biztonság</p>
                   </div>
                 </div>
@@ -525,7 +525,7 @@ export default function App() {
                     <Building2 className="w-8 h-8" strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="font-orbitron text-2xl font-black uppercase tracking-widest text-white">Ipari villanyszerelés</h3>
+                    <h3 className="font-space text-2xl font-black uppercase tracking-widest text-white">Ipari villanyszerelés</h3>
                     <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] mt-2">Nagy teljesítményű rendszerek</p>
                   </div>
                 </div>
@@ -569,7 +569,7 @@ export default function App() {
           <div className="flex items-center gap-8 mb-24">
              <div className="w-1 h-12 bg-brand-red"></div>
              <div className="flex flex-col">
-               <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl uppercase tracking-widest mb-2">Referenciák</h2>
+               <h2 className="font-space text-2xl sm:text-3xl md:text-4xl uppercase tracking-widest mb-2">Referenciák</h2>
                <p className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.2em] md:tracking-[0.4em]">Kiemelt Projektjeink & Megvalósítások</p>
              </div>
           </div>
@@ -609,7 +609,7 @@ export default function App() {
                    <h2 className="font-orbitron text-2xl sm:text-3xl md:text-4xl uppercase tracking-widest">Kapcsolat</h2>
                 </div>
                 
-                <h3 className="font-orbitron text-2xl md:text-3xl font-black uppercase text-brand-red mb-8 leading-tight tracking-tight">
+                <h3 className="font-space text-2xl md:text-3xl font-black uppercase text-brand-red mb-8 leading-tight tracking-tight">
                   ELÉRHETŐSÉG
                 </h3>
                 
@@ -651,7 +651,7 @@ export default function App() {
               <div className="md:w-1/2 border border-brand-grey bg-brand-black p-12 relative overflow-hidden group">
                 <div className="absolute inset-0 industrial-grid opacity-20"></div>
                 <div className="relative z-10">
-                  <h4 className="font-orbitron text-xl uppercase mb-10 tracking-widest flex items-center gap-4">
+                  <h4 className="font-space text-xl uppercase mb-10 tracking-widest flex items-center gap-4">
                     <span className="w-8 h-px bg-brand-red"></span>
                     Működési Területünk
                   </h4>
@@ -735,7 +735,7 @@ export default function App() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.3em] mb-10">Jogi nyilatkozat</h4>
+            <h4 className="text-[10px] font-space font-bold text-brand-red uppercase tracking-[0.3em] mb-10">Jogi nyilatkozat</h4>
             <ul className="flex flex-col gap-6 text-[10px] font-michroma uppercase tracking-widest text-gray-500">
               <li><a href="#" className="hover:text-white transition-colors">Adatvédelmi irányelvek</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Általános szerződési feltételek</a></li>
@@ -744,7 +744,7 @@ export default function App() {
           </div>
 
           <div className="md:col-span-2">
-            <h4 className="text-[10px] font-michroma text-brand-red uppercase tracking-[0.3em] mb-10">Biztonság</h4>
+            <h4 className="text-[10px] font-space font-bold text-brand-red uppercase tracking-[0.3em] mb-10">Biztonság</h4>
             <ul className="flex flex-col gap-6 text-[10px] font-michroma uppercase tracking-widest text-gray-500">
               <li><a href="#" className="hover:text-white transition-colors">Biztonsági szabványok</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Villamossági engedélyek</a></li>
