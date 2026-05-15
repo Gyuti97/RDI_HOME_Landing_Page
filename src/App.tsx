@@ -701,7 +701,7 @@ export default function App() {
                     <div className="absolute inset-0 bg-brand-red/5 mix-blend-overlay pointer-events-none"></div>
                     <div className="absolute bottom-6 left-6 bg-brand-black/90 backdrop-blur-md px-6 py-4 border-l-2 border-brand-red z-10 transition-transform group-hover/map:-translate-y-2">
                       <p className="text-[10px] font-michroma uppercase tracking-widest text-brand-red mb-1">SZÉKHELY</p>
-                      <p className="text-sm font-orbitron font-bold">GYŐR, MAGYARORSZÁG</p>
+                      <p className="text-sm font-space font-bold">GYŐR, MAGYARORSZÁG</p>
                       <p className="text-[9px] text-gray-500 font-light mt-1">ORSZÁGOS SZOLGÁLTATÁS</p>
                     </div>
                   </div>
